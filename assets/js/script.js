@@ -17,3 +17,25 @@ const miFuncionIIfe = (() => {
     };
 })();
 
+// 2. Clase padre Multimedia
+class Multimedia {
+    constructor(url) {
+        this._url = url;
+    }
+¨
+        
+        this.setInicio = () => {
+
+};
+
+/
+getUrl = () {
+    return this._url;
+}
+
+
+setInicio = () {
+    return
+}
+
+
