@@ -58,9 +58,9 @@ class Reproductor extends Multimedia {
 }
 
 // 4. Instanciar la clase hija Reproductor y mostrar los videos
-let musica = new Reproductor(`musica`, "https://www.youtube.com/embed/VIDEO_MUSICA", "iframeMusica");
-let pelicula = new Reproductor(`pelicula`, "https://www.youtube.com/embed/VIDEO_PELICULA", "iframePelicula");
-let serie = new Reproductor(`serie`, "https://www.youtube.com/embed/VIDEO_SERIE", "iframeSerie");
+let musica = new Reproductor("https://www.youtube.com/embed/VIDEO_MUSICA", `musica`);
+let pelicula = new Reproductor("https://www.youtube.com/embed/VIDEO_PELICULA", `pelicula`);
+let serie = new Reproductor("https://www.youtube.com/embed/VIDEO_SERIE", `serie`);
 
 // Invocar al método playMultimedia para cada instancia creada
 musica.playMultimedia();
