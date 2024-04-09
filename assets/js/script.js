@@ -38,4 +38,23 @@ setInicio = () {
     return
 }
 
+// 3. Crear una clase “Reproductor”, siendo hija de la clase padre Multimedia para
+class Reproductor extends Multimedia {
+    constructor(url, id) {
+        super(url);
+        this.id = id;
+    }
+
+    // Método para mostrar el video en la etiqueta iframe correspondiente
+    playMultimedia() {
+        Reproductor.playMultimedia(this.getUrl(), this.id);
+    }
+
+    // Método para modificar el tiempo de inicio en la URL de la etiqueta iframe polimorfismo
+    setInicio(tiempo) {
+        const url = this.getUrl() + `?start=${tiempo}`;
+        this.setUrl(url);
+    }
+}
+
 
