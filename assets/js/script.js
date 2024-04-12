@@ -21,22 +21,34 @@ const miFuncionIIfe = (() => {
 class Multimedia {
     constructor(url) {
         this._url = url;
-    }
-¨
-        
+    }    
         this.setInicio = () => {
 
 };
 
-/
 getUrl = () {
     return this._url;
 }
 
-
 setInicio = () {
     return
 }
+// Función para configurar el video de YouTube en un iframe
+function setVideoURL(id, videoUrl) {
+    var iframe = document.getElementById(id);
+    if (iframe) {
+        iframe.src = videoUrl;
+    }
+}
+
+// Llama a la función setVideoURL para cada categoría
+setVideoURL('musica', 'https://www.youtube.com/embed/aJOTlE1K90k'); // Ejemplo con ID de video para música
+setVideoURL('peliculas', 'https://www.youtube.com/embed/tgbNymZ7vqY'); // Ejemplo con ID de video para películas
+setVideoURL('series', 'https://www.youtube.com/embed/s7L2PVdrb_8'); // Ejemplo con ID de video para series
+
+// Asegúrate de llamar a estas funciones cuando la página ya esté cargada, o colócalas al final del archivo HTML antes de cerrar el tag </body>.
+
+
 
 // 3. Crear una clase “Reproductor”, siendo hija de la clase padre Multimedia para
 class Reproductor extends Multimedia {
@@ -47,26 +59,22 @@ class Reproductor extends Multimedia {
 
     // Método para mostrar el video en la etiqueta iframe correspondiente
     playMultimedia() {
-        Reproductor.playMultimedia(this.getUrl(), this.id);
+        miFuncionIIfe.miFuncionPublica(this._url.this._id);
     }
 
     // Método para modificar el tiempo de inicio en la URL de la etiqueta iframe polimorfismo
     setInicio(tiempo) {
-        const url = this.getUrl() + `?start=${tiempo}`;
-        this.setUrl(url);
+        this._id.setAttribute(`src`, `${this._url}&amp;start=${tiempo}`);
     }
 }
 
-// 4. Instanciar la clase hija Reproductor y mostrar los videos
-let musica = new Reproductor("https://www.youtube.com/embed/VIDEO_MUSICA", `musica`);
-let pelicula = new Reproductor("https://www.youtube.com/embed/VIDEO_PELICULA", `pelicula`);
-let serie = new Reproductor("https://www.youtube.com/embed/VIDEO_SERIE", `serie`);
 
 // Invocar al método playMultimedia para cada instancia creada
 musica.playMultimedia();
 pelicula.playMultimedia();
+//serie.setInicio(45);
 serie.playMultimedia();
 
-// Modificar el tiempo de inicio en alguna de las instancias creadas
-serie.setInicio(30); // Se inicia el video de la serie en el segundo 30
+
+
 
